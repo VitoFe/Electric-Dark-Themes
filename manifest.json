@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "version": "5.1",
+  "name": "Electric Purple Dark",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
+  },
+  "theme": {
+    "images": {},
+    "properties": {
+      "color_scheme": "dark"
+    },
+    "colors": {
+      "frame": "#0C0E14",
+      "tab_background_text": "#BBB",
+      "toolbar": "#131622",
+      "toolbar_field": "#0C0E14",
+      "toolbar_field_border_focus": "#BD00FF",
+      "toolbar_field_text": "#BD00FF",
+      "popup": "#0C0E14",
+      "popup_highlight": "#BD00FF",
+      "popup_text": "#FFFFFF",
+      "ntp_background": "#131622",
+      "ntp_text": "#FFFFFF",
+      "sidebar": "#0C0E14",
+      "sidebar_text": "#FFFFFF",
+      "bookmark_text": "#FFFFFF",
+      "tab_line": "#BD00FF",
+      "tab_selected": "#131622",
+      "tab_text": "#FFFFFF",
+      "button_background": "#131622",
+      "button_background_active": "#BD00FF",
+      "button_background_hover": "#BD00FF"
+    }
+  }
+}
