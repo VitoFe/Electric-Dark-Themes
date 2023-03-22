@@ -1,0 +1,23 @@
+{
+  "icons": {
+    "32": "icons/icon-32.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
+  },
+  "theme": {
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    },
+    "colors": {
+      "bookmark_text": "text_color",
+      "frame": "frame_color",
+      "frame_inactive": "frame_color",
+      "ntp_background": "toolbar_color",
+      "ntp_text": "text_color",
+      "tab_text": "text_color",
+      "tab_background_text": "text_muted_color",
+      "toolbar": "toolbar_color"
+    }
+  }
+}

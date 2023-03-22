@@ -1,0 +1,21 @@
+{
+  "colors": {
+    "sidebar": "frame_color",
+    "sidebar_text": "text_color",
+    "toolbar_field": "frame_color",
+    "toolbar_field_border": "accent_color_semitrans",
+    "toolbar_field_border_focus": "accent_color",
+    "toolbar_field_highlight": "accent_color_semitrans",
+    "toolbar_field_text": "accent_color",
+    "toolbar_top_separator": "toolbar_color",
+    "tab_line": "accent_color",
+    "tab_loading": "accent_color",
+    "tab_selected": "toolbar_color",
+    "popup": "frame_color",
+    "popup_highlight": "accent_color",
+    "popup_highlight_text": "text_color",
+    "popup_text": "text_color",
+    "button_background_active": "accent_color",
+    "button_background_hover": "accent_color_semitrans"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "colors": {
+    "button_background": "toolbar_color",
+    "background_tab": "frame_color",
+    "background_tab_inactive": "frame_color",
+    "background_tab_incognito": "frame_color",
+    "background_tab_incognito_inactive": "frame_color",
+    "frame_incognito": "frame_color",
+    "frame_incognito_inactive": "frame_color",
+    "ntp_link": "accent_color",
+    "toolbar_text": "accent_color",
+    "omnibox_background": "frame_color",
+    "omnibox_text": "accent_color_chrome"
+  }
+}
