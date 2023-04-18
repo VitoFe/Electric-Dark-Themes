@@ -1,9 +1,12 @@
-# Electric Purple Dark Theme 🔮
+# Electric Purple/Orange Dark Theme 🔮
 > Experience the thrill of browsing the internet in style with this Browser Theme
 
 ![image](https://user-images.githubusercontent.com/13234165/226485496-2a8aeda8-0f5b-4189-8c93-740127836c19.png)
 
-This is a dark theme for Firefox 🦊 or Chrome 🌀 that features shades of purple and black. It's perfect for users who prefer a sleek, modern look for their browsing experience.
+![image](https://user-images.githubusercontent.com/13234165/232872079-b3c8a827-8b0f-409a-b599-2fd19a85ed46.png)
+
+
+This is a dark theme for Firefox 🦊 or Chrome 🌀. It's perfect for users who prefer a sleek, modern look for their browsing experience.
 
 ## How to install 📥
 
