@@ -1,7 +1,7 @@
 # Electric Dark Themes 🔮
-> Experience the thrill of browsing the internet in style with this Browser Theme
+> Experience the thrill of browsing the internet in style
 
-This is a dark theme for Firefox 🦊 or Chrome 🌀. It's perfect for users who prefer a sleek, modern look for their browsing experience.
+This is a dark theme with multiple color schemes for both Firefox 🦊 and Chrome 🌀. It's perfect for users who prefer a sleek, modern look for their browsing experience.
 
 ## How to install 📥
 
@@ -30,8 +30,8 @@ The dependencies used in the code are all part of the Python Standard Library an
 
 This theme comes with the following features:
 - Dark color scheme for a comfortable browsing experience in low light environments
-- Custom color scheme with electric purple accents for a pop of color
-- Stylish tab line with electric purple color to easily identify the active tab
+- Custom color scheme with electric accents for a pop of color
+- Stylish tab line with electric color to easily identify the active tab
 - Utilizes templates to produce a Chrome and Firefox theme using the same color scheme
 
 ## Contributing 🤝
