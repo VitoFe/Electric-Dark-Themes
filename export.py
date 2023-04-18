@@ -22,6 +22,11 @@ manifest_data = {
 addon_ids = {
     "Purple": "{5d266402-4868-4f0c-b650-fd2d17c3a752}",
     "Orange": "{5d266402-4868-4f0c-b650-fd2d17c3a753}",
+    "Green": "{5d266402-4868-4f0c-b650-fd2d17c3a754}",
+    "Azure": "{5d266402-4868-4f0c-b650-fd2d17c3a765}",
+    "Pink": "{5d266402-4868-4f0c-b650-fd2d17c3a756}",
+    "Red": "{5d266402-4868-4f0c-b650-fd2d17c3a757}",
+    "Yellow": "{5d266402-4868-4f0c-b650-fd2d17c3a758}",
 }
 
 
@@ -33,7 +38,7 @@ colors = {
         "frame_color": "#0C0E14",
         "text_color": "#FFFFFF",
         "text_muted_color": "#CCCCCC",
-        "toolbar_color": "#131622",
+        "toolbar_color": "#121521",
     },
     "Orange": {
         "accent_color": "#ff3503",
@@ -43,6 +48,51 @@ colors = {
         "text_color": "#FFFFFF",
         "text_muted_color": "#CCCCCC",
         "toolbar_color": "#150e0d",
+    },
+    "Green": {
+        "accent_color": "#00FF00",
+        "accent_color_semitrans": "#00FF0030",
+        "accent_color_chrome": "#00FF00",
+        "frame_color": "#0C0E14",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#0D150E",
+    },
+    "Azure": {
+        "accent_color": "#00BFFF",
+        "accent_color_semitrans": "#00BFFF30",
+        "accent_color_chrome": "#00BFFF",
+        "frame_color": "#0C0E14",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#0D1315",
+    },
+    "Red": {
+        "accent_color": "#FF0000",
+        "accent_color_semitrans": "#FF000030",
+        "accent_color_chrome": "#FF0000",
+        "frame_color": "#0C0E14",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#150D0D",
+    },
+    "Yellow": {
+        "accent_color": "#FFFF00",
+        "accent_color_semitrans": "#FFFF0030",
+        "accent_color_chrome": "#FFFF00",
+        "frame_color": "#0C0E14",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#15150D",
+    },
+    "Pink": {
+        "accent_color": "#FF00FF",
+        "accent_color_semitrans": "#FF00FF30",
+        "accent_color_chrome": "#FF00FF",
+        "frame_color": "#0C0E14",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#150D15",
     },
 }
 
