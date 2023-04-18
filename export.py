@@ -15,9 +15,13 @@ manifest_data = {
     "name": "Electric [color] Dark",
     "author": "Vito Ferri",
     "developer": {"name": "Vito Ferri", "url": "https://github.com/VitoFe"},
-    "browser_specific_settings": {
-        "gecko": {"id": "{5d266402-4868-4f0c-b650-fd2d17c3a752}"}
-    },
+    "browser_specific_settings": {"gecko": {"id": "[id]"}},
+}
+
+
+addon_ids = {
+    "Purple": "{5d266402-4868-4f0c-b650-fd2d17c3a752}",
+    "Orange": "{5d266402-4868-4f0c-b650-fd2d17c3a753}",
 }
 
 
@@ -55,6 +59,9 @@ for browser in ["firefox", "chrome"]:
             manifest = copy.deepcopy(manifest_data)
             manifest["theme"]["colors"].update(manifest_spec["colors"])
             manifest["name"] = manifest_data["name"].replace("[color]", accent)
+            manifest.update(
+                {"browser_specific_settings": {"gecko": {"id": addon_ids[accent]}}}
+            )
             context = colormap.copy()
             manifest["theme"]["colors"] = {
                 key: context[value] if value in context else value
