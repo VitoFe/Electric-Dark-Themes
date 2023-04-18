@@ -1,4 +1,4 @@
-# Electric Purple/Orange Dark Theme 🔮
+# Electric Dark Themes 🔮
 > Experience the thrill of browsing the internet in style with this Browser Theme
 
 ![image](https://user-images.githubusercontent.com/13234165/232872371-e8723fe4-560f-4bf9-94fd-0039b5bd8f62.png)
