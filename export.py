@@ -96,6 +96,26 @@ colors = {
     },
 }
 
+def invert_hex(hex_color):
+  hex_color = hex_color.lstrip('#')
+  r, g, b = tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+  r = 255 - r
+  g = 255 - g
+  b = 255 - b
+  inverted_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+  return inverted_hex
+
+# Convert color theme from dark-mode to light-mode
+def convert_theme(theme):
+  new_theme = {}
+  for key, value in theme.items():
+    if value.startswith('#'):
+      new_value = invert_hex(value)
+    else:
+      new_value = value
+    new_theme[key] = new_value
+  return new_theme
+
 # Load common manifest data
 with open(os.path.join("templates", "common.json"), "r", encoding="utf-8") as f:
     manifest_data.update(json.load(f))
