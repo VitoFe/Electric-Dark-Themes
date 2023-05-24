@@ -21,6 +21,11 @@ Install the theme from the respective Firefox Addons page (click on an image):
 
 [![Pink-Dark](https://user-images.githubusercontent.com/13234165/232884167-1f7dc203-167a-468e-82b5-2509705b6fc7.png)](https://addons.mozilla.org/en-US/firefox/addon/electric-pink-dark/)
 
+[![Twitch-Dark](https://github.com/VitoFe/Electric-Dark-Themes/assets/13234165/0e883a67-e383-4c31-8423-d9118a5e2dbc)](https://addons.mozilla.org/en-US/firefox/addon/electric-twitch-dark/)
+
+[![Discord-Dark](https://github.com/VitoFe/Electric-Dark-Themes/assets/13234165/6981f329-de7d-44db-82eb-84bd6581c525)](https://addons.mozilla.org/en-US/firefox/addon/electric-discord-dark/)
+
+
 ## How to build from source 👨‍💻
 
 The dependencies used in the code are all part of the Python Standard Library and do not need to be installed manually as they are included with a standard installation of Python.
