@@ -99,7 +99,7 @@ colors = {
     "Twitch": {
         "accent_color": "#9146FF",
         "accent_color_semitrans": "#9146FF30",
-        "accent_color_chrome": "#9146FF",
+        "accent_color_chrome": "#AA60FF",
         "frame_color": "#0C0E14",
         "text_color": "#FFFFFF",
         "text_muted_color": "#CCCCCC",
