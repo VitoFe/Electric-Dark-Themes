@@ -11,7 +11,7 @@ import copy
 
 manifest_data = {
     "manifest_version": 3,
-    "version": "5.2",
+    "version": "5.3",
     "name": "Electric [color] Dark",
     "author": "Vito Ferri",
     "developer": {"name": "Vito Ferri", "url": "https://github.com/VitoFe"},
@@ -27,6 +27,8 @@ addon_ids = {
     "Pink": "{5d266402-4868-4f0c-b650-fd2d17c3a756}",
     "Red": "{5d266402-4868-4f0c-b650-fd2d17c3a757}",
     "Yellow": "{5d266402-4868-4f0c-b650-fd2d17c3a758}",
+    "Twitch": "{5d266402-4868-4f0c-b650-fd2d17c3a759}",
+    "Discord": "{5d266402-4868-4f0c-b650-fd2d17c3a760}",
 }
 
 
@@ -94,6 +96,26 @@ colors = {
         "text_muted_color": "#CCCCCC",
         "toolbar_color": "#150D15",
     },
+    "Twitch": {
+        "accent_color": "#9146FF",
+        "accent_color_semitrans": "#9146FF30",
+        "accent_color_chrome": "#9146FF",
+        "frame_color": "#0C0E14",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#1A0F2B",
+        "theme_frame": "images/twitch-[browser].png",
+    },
+    "Discord": {
+        "accent_color": "#7289DA",
+        "accent_color_semitrans": "#7289DA30",
+        "accent_color_chrome": "#7289DA",
+        "frame_color": "#23272A",
+        "text_color": "#FFFFFF",
+        "text_muted_color": "#99AAB5",
+        "toolbar_color": "#2C2F33",
+        "theme_frame": "images/discord-[browser].png",
+    },
 }
 
 def invert_hex(hex_color):
@@ -132,6 +154,8 @@ for browser in ["firefox", "chrome"]:
             manifest.update(
                 {"browser_specific_settings": {"gecko": {"id": addon_ids[accent]}}}
             )
+            if "theme_frame" in colormap.keys():
+                manifest["theme"]["images"] = {"theme_frame": colormap["theme_frame"].replace("[browser]", browser)}
             context = colormap.copy()
             manifest["theme"]["colors"] = {
                 key: context[value] if value in context else value
@@ -148,8 +172,9 @@ for browser in ["firefox", "chrome"]:
             EXT = ".xpi" if browser == "firefox" else ".zip"
             extension_file = f"{manifest['name'].replace(' ', '')}_{browser}_{manifest['version']}{EXT}"
             with zipfile.ZipFile(extension_file, "w", zipfile.ZIP_DEFLATED) as package:
-                for root, dirs, files in os.walk("icons"):
-                    for file in files:
-                        package.write(os.path.join(root, file))
+                for include_dir in [ "icons", "images"]:
+                    for root, dirs, files in os.walk(include_dir):
+                        for file in files:
+                            package.write(os.path.join(root, file))
                 package.write("LICENSE")
                 package.writestr("manifest.json", json.dumps(manifest))
