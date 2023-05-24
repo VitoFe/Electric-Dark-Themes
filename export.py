@@ -1,5 +1,5 @@
 """
-This module generates the Electric Purple Dark theme for both Firefox and Chrome.
+This module generates the Electric Dark themes for both Firefox and Chrome.
 It loads common manifest data from a JSON file, generates a specific manifest
 for each browser, and updates color placeholders using a predefined color scheme.
 """
