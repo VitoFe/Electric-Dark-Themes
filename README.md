@@ -42,3 +42,7 @@ This theme comes with the following features:
 ## Contributing 🤝
 
 Please submit an issue and provide thorough details if you discover any flaws or have any recommendations for enhancements. Pull requests are also welcomed.
+
+## Disclaimer 📝
+
+The themes named “Twitch” and “Discord” are not affiliated with, endorsed by, or sponsored by Twitch Interactive, Inc. or Discord, Inc. respectively. The themes are intended for personal use only. The use of the names “Twitch” and “Discord” are for descriptive purposes only and do not imply any association with the official brands or services.
