@@ -29,6 +29,7 @@ addon_ids = {
     "Yellow": "{5d266402-4868-4f0c-b650-fd2d17c3a758}",
     "Twitch": "{5d266402-4868-4f0c-b650-fd2d17c3a759}",
     "Discord": "{5d266402-4868-4f0c-b650-fd2d17c3a760}",
+    "Cyberpunk": "{5d266402-4868-4f0c-b650-fd2d17c3a761}",
 }
 
 
@@ -116,6 +117,16 @@ colors = {
         "toolbar_color": "#2C2F33",
         "theme_frame": "images/discord-[browser].png",
     },
+    "Cyberpunk": {
+        "accent_color": "#BD00FF",
+        "accent_color_semitrans": "#BD00FF30",
+        "accent_color_chrome": "#C72EFF",
+        "frame_color": "#0C0E14",
+        "text_color": "#f2e900",
+        "text_muted_color": "#02d7f2",
+        "toolbar_color": "#0D1315",
+        "theme_frame": "images/cyberpunk.svg"
+    },
 }
 
 def invert_hex(hex_color):
@@ -138,6 +149,7 @@ def convert_theme(theme):
     new_theme[key] = new_value
   return new_theme
 
+
 # Load common manifest data
 with open(os.path.join("templates", "common.json"), "r", encoding="utf-8") as f:
     manifest_data.update(json.load(f))
@@ -155,7 +167,10 @@ for browser in ["firefox", "chrome"]:
                 {"browser_specific_settings": {"gecko": {"id": addon_ids[accent]}}}
             )
             if "theme_frame" in colormap.keys():
-                manifest["theme"]["images"] = {"theme_frame": colormap["theme_frame"].replace("[browser]", browser)}
+                theme_frame = colormap["theme_frame"].replace("[browser]", browser)
+                if theme_frame.endswith(".svg") and browser != "firefox":
+                    theme_frame = theme_frame.replace(".svg", ".png")
+                manifest["theme"]["images"] = {"theme_frame": theme_frame}
             context = colormap.copy()
             manifest["theme"]["colors"] = {
                 key: context[value] if value in context else value
