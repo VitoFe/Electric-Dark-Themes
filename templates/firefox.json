@@ -13,9 +13,9 @@
     "tab_selected": "toolbar_color",
     "popup": "frame_color",
     "popup_highlight": "accent_color",
-    "popup_highlight_text": "text_color",
+    "popup_highlight_text": "text_color_popup",
     "popup_text": "text_color",
-    "button_background_active": "accent_color",
-    "button_background_hover": "accent_color_semitrans"
+    "button_background_active": "accent_color_semitrans",
+    "button_background_hover": "accent_color_trans"
   }
 }
