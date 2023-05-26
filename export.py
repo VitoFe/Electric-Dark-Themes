@@ -11,7 +11,7 @@ import copy
 
 manifest_data = {
     "manifest_version": 3,
-    "version": "5.3",
+    "version": "5.4",
     "name": "Electric [color] Dark",
     "author": "Vito Ferri",
     "developer": {"name": "Vito Ferri", "url": "https://github.com/VitoFe"},
