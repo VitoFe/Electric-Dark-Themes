@@ -23,7 +23,7 @@ Install the theme from the respective Firefox Addons page (click on an image):
 
 [![Twitch-Dark](https://github.com/VitoFe/Electric-Dark-Themes/assets/13234165/5e790055-ef55-47fb-aa6f-fb6547a56468)](https://addons.mozilla.org/en-US/firefox/addon/electric-twitch-dark/)
 
-[![Discord-Dark](https://github.com/VitoFe/Electric-Dark-Themes/assets/13234165/6981f329-de7d-44db-82eb-84bd6581c525)](https://addons.mozilla.org/en-US/firefox/addon/electric-discord-dark/)
+[![Discord-Dark](https://github.com/VitoFe/Electric-Dark-Themes/assets/13234165/cdb70a2d-4035-4da5-854d-76c6f22d9441)](https://addons.mozilla.org/en-US/firefox/addon/electric-discord-dark/)
 
 [![Cyberpunk-Dark](https://github.com/VitoFe/Electric-Dark-Themes/assets/13234165/f8816073-5762-4fde-96e3-da1a80c722c5)](https://addons.mozilla.org/en-US/firefox/addon/electric-cyberpunk-dark/)
 
