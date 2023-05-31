@@ -11,7 +11,7 @@ import copy
 
 manifest_data = {
     "manifest_version": 3,
-    "version": "5.5",
+    "version": "5.8.3",
     "name": "Electric [color] Dark",
     "author": "Vito Ferri",
     "developer": {"name": "Vito Ferri", "url": "https://github.com/VitoFe"},
@@ -141,12 +141,12 @@ colors = {
         "accent_color_trans": "#BD00FF20",
         "accent_color_semitrans": "#BD00FF30",
         "accent_color_chrome": "#C72EFF",
-        "frame_color": "#0C0E14",
+        "frame_color": "#0C0E1480",
         "text_color": "#f2e900",
         "text_color_popup": "#002b32",
         "text_muted_color": "#02d7f2",
-        "toolbar_color": "#0D1315",
-        "theme_frame": "images/cyberpunk.svg"
+        "toolbar_color": "#0D131550",
+        "theme_frame": "images/cyberpunk.png"
     },
     "Cerbero": {
         "accent_color": "#fffe94",
@@ -157,7 +157,7 @@ colors = {
         "text_color": "#fffe94",
         "text_color_popup": "#0C0E14",
         "text_muted_color": "#cccb76",
-        "toolbar_color": "#0d0d0050",
+        "toolbar_color": "#0d0d0060",
         "theme_ntp_bg": "images/cerbero-ntpb.png",
         "theme_frame": "images/cerbero.png"
     },
@@ -229,8 +229,10 @@ for browser in ["firefox", "chrome"]:
                 }
             # Create extension package
             EXT = ".xpi" if browser == "firefox" else ".zip"
-            extension_file = f"{manifest['name'].replace(' ', '')}_{browser}_{manifest['version']}{EXT}"
-            with zipfile.ZipFile(extension_file, "w", zipfile.ZIP_DEFLATED) as package:
+            theme_file = f"{manifest['name'].replace(' ', '')}_{browser}_{manifest['version']}{EXT}"
+            if not os.path.exists("out"):
+                os.makedirs("out")
+            with zipfile.ZipFile(os.path.join("out", theme_file), "w", zipfile.ZIP_DEFLATED) as package:
                 for include_dir in [ "icons", "images"]:
                     for root, dirs, files in os.walk(include_dir):
                         for file in files:
