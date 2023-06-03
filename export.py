@@ -31,6 +31,7 @@ addon_ids = {
     "Discord": "{5d266402-4868-4f0c-b650-fd2d17c3a760}",
     "Cyberpunk": "{5d266402-4868-4f0c-b650-fd2d17c3a761}",
     "Cerbero": "{5d266402-4868-4f0c-b650-fd2d17c3a762}",
+    "Vaporwave": "{5d266402-4868-4f0c-b650-fd2d17c3a763}",
 }
 
 
@@ -160,6 +161,18 @@ colors = {
         "toolbar_color": "#0d0d0060",
         "theme_ntp_bg": "images/cerbero-ntpb.png",
         "theme_frame": "images/cerbero.png"
+    },
+    "Vaporwave": {
+        "accent_color": "#f62e97",
+        "accent_color_trans": "#f62e9720",
+        "accent_color_semitrans": "#f62e9730",
+        "accent_color_chrome": "#f62e97",
+        "frame_color": "#1A0F2B80",
+        "text_color": "#f9d653",
+        "text_color_popup": "#0C0E14",
+        "text_muted_color": "#f9ba53",
+        "toolbar_color": "#1A0F2B50",
+        "theme_frame": "images/vaporwave.png"
     },
 }
 
