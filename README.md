@@ -27,9 +27,7 @@ Install the theme from the respective Firefox Addons page (click on an image) or
 
 [![Cyberpunk-Dark](./previews/Cyberpunk.png)](https://addons.mozilla.org/en-US/firefox/addon/electric-cyberpunk-dark/)
 
-[![Cerbero-Dark](./previews/Vaporwave.png)](https://addons.mozilla.org/en-US/firefox/addon/electric-vaporwave-dark/)
-
-[![Cerbero-Dark](./previews/Cerbero.png)](https://addons.mozilla.org/en-US/firefox/addon/electric-cerbero-dark/)
+[![Vaporwave-Dark](./previews/Vaporwave.png)](https://addons.mozilla.org/en-US/firefox/addon/electric-vaporwave-dark/)
 
 ## How to build from source 👨‍💻
 
