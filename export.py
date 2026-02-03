@@ -4,10 +4,10 @@ It loads common manifest data from a JSON file, generates a specific manifest
 for each browser, and updates color placeholders using a predefined color scheme.
 """
 
+import copy
+import json
 import os
 import zipfile
-import json
-import copy
 
 manifest_data = {
     "manifest_version": 3,
@@ -30,7 +30,7 @@ addon_ids = {
     "Twitch": "{5d266402-4868-4f0c-b650-fd2d17c3a759}",
     "Discord": "{5d266402-4868-4f0c-b650-fd2d17c3a760}",
     "Cyberpunk": "{5d266402-4868-4f0c-b650-fd2d17c3a761}",
-    "Cerbero": "{5d266402-4868-4f0c-b650-fd2d17c3a762}",
+    "Nyan": "{5d266402-4868-4f0c-b650-fd2d17c3a962}",
     "Vaporwave": "{5d266402-4868-4f0c-b650-fd2d17c3a763}",
 }
 
@@ -149,18 +149,19 @@ colors = {
         "toolbar_color": "#0D131560",
         "theme_frame": "images/cyberpunk.png"
     },
-    "Cerbero": {
-        "accent_color": "#fffe94",
-        "accent_color_trans": "#fffe9420",
-        "accent_color_semitrans": "#fffe9430",
-        "accent_color_chrome": "#fffe94",
-        "frame_color": "#0d0d00DD",
-        "text_color": "#fffe94",
-        "text_color_popup": "#0C0E14",
-        "text_muted_color": "#cccb76",
-        "toolbar_color": "#0d0d0060",
-        "theme_ntp_bg": "images/cerbero-ntpb.png",
-        "theme_frame": "images/cerbero.png"
+    "Nyan": {
+        "accent_color": "#BD00FF",
+        "accent_color_trans": "#BD00FF20",
+        "accent_color_semitrans": "#BD00FF30",
+        "accent_color_chrome": "#C72EFF",
+        "frame_color": "#0C0E14EE",
+        "text_color": "#FFFFFF",
+        "text_color_popup": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#121521",
+        "additional_backgrounds": ["images/nyan-0.png", "images/nyan-1.png"],
+        "additional_backgrounds_alignment": ["right top", "right top"],
+        "additional_backgrounds_tiling": ["no-repeat", "repeat"],
     },
     "Vaporwave": {
         "accent_color": "#f62e97",
@@ -228,6 +229,12 @@ for browser in ["firefox", "chrome"]:
                 manifest["theme"]["images"]["theme_frame"] = theme_frame
             if "theme_ntp_bg" in colormap.keys():
                 manifest["theme"]["images"]["theme_ntp_background"] = colormap["theme_ntp_bg"]
+            if "additional_backgrounds" in colormap:
+                manifest["theme"]["images"]["additional_backgrounds"] = colormap["additional_backgrounds"]
+            if "additional_backgrounds_alignment" in colormap:
+                manifest["theme"]["properties"]["additional_backgrounds_alignment"] = colormap["additional_backgrounds_alignment"]
+            if "additional_backgrounds_tiling" in colormap:
+                manifest["theme"]["properties"]["additional_backgrounds_tiling"] = colormap["additional_backgrounds_tiling"]
             context = colormap.copy()
             manifest["theme"]["colors"] = {
                 key: context[value] if value in context else value
