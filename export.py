@@ -15,7 +15,7 @@ import zipfile
 
 manifest_data = {
     "manifest_version": 3,
-    "version": "5.8.4",
+    "version": "5.8.5",
     "name": "Electric [color] Dark",
     "author": "Vito Ferri",
     "developer": {"name": "Vito Ferri", "url": "https://github.com/VitoFe"},
