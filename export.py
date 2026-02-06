@@ -127,7 +127,6 @@ colors = {
         "text_color_popup": "#FFFFFF",
         "text_muted_color": "#CCCCCC",
         "toolbar_color": "#1A0F2B",
-        "theme_frame": "images/twitch-[browser].png",
     },
     "Discord": {
         "accent_color": "#7289DA",
@@ -139,7 +138,6 @@ colors = {
         "text_color_popup": "#FFFFFF",
         "text_muted_color": "#99AAB5",
         "toolbar_color": "#2C2F33",
-        "theme_frame": "images/discord-[browser].png",
     },
     "Cyberpunk": {
         "accent_color": "#BD00FF",
