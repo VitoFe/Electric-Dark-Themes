@@ -1,4 +1,5 @@
 # Electric Dark Themes 🔮
+
 > Experience the thrill of browsing the internet in style
 
 This is a dark theme with multiple color schemes for both Firefox 🦊 and Chrome 🌀. It's perfect for users who prefer a sleek, modern look for their browsing experience.
@@ -29,14 +30,18 @@ Install the theme from the respective Firefox Addons page (click on an image) or
 
 [![Vaporwave-Dark](./previews/Vaporwave.png)](https://addons.mozilla.org/en-US/firefox/addon/electric-vaporwave-dark/)
 
+[![Nyan Cat Purple-Dark](./previews/Nyan.png)](https://addons.mozilla.org/en-US/firefox/addon/nyan-cat-purple-dark/)
+
 ## How to build from source 👨‍💻
 
 The dependencies used in the code are all part of the Python Standard Library and do not need to be installed manually as they are included with a standard installation of Python.
+
 - Run the Python script to generate the extension packages for Firefox and Chrome (should also work on other Chromium-based browsers)
 
 ## Features 🎨
 
 This theme comes with the following features:
+
 - Dark color scheme for a comfortable browsing experience in low light environments
 - Custom color scheme with electric accents for a pop of color
 - Stylish tab line with electric color to easily identify the active tab
