@@ -2,9 +2,9 @@
 
 > Experience the thrill of browsing the internet in style
 
-This is a dark theme with multiple color schemes for both Firefox 🦊 and Chrome 🌀. It's perfect for users who prefer a sleek, modern look for their browsing experience.
+This is a dark theme with multiple color schemes for both Firefox and Chrome. It's perfect for users who prefer a sleek, modern look for their browsing experience.
 
-## How to install 📥
+## How to install
 
 Install the theme from the respective Firefox Addons page (click on an image) or from [my Firefox Addons profile](https://addons.mozilla.org/en-US/firefox/user/17592504/):
 
@@ -32,13 +32,13 @@ Install the theme from the respective Firefox Addons page (click on an image) or
 
 [![Nyan Cat Purple-Dark](./previews/Nyan.png)](https://addons.mozilla.org/en-US/firefox/addon/nyan-cat-purple-dark/)
 
-## How to build from source 👨‍💻
+## How to build from source
 
 The dependencies used in the code are all part of the Python Standard Library and do not need to be installed manually as they are included with a standard installation of Python.
 
 - Run the Python script to generate the extension packages for Firefox and Chrome (should also work on other Chromium-based browsers)
 
-## Features 🎨
+## Features
 
 This theme comes with the following features:
 
@@ -47,10 +47,10 @@ This theme comes with the following features:
 - Stylish tab line with electric color to easily identify the active tab
 - Utilizes templates to produce a Chrome and Firefox theme using the same color scheme
 
-## Contributing 🤝
+## Contributing
 
 Please submit an issue and provide thorough details if you discover any flaws or have any recommendations for enhancements. Pull requests are also welcomed.
 
-## Disclaimer 📝
+## Disclaimer
 
 The themes named “Twitch” and “Discord” are not affiliated with, endorsed by, or sponsored by Twitch Interactive, Inc. or Discord, Inc. respectively. The themes are intended for personal use only. The use of the names “Twitch” and “Discord” are for descriptive purposes only and do not imply any association with the official brands or services.
