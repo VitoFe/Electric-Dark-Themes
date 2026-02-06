@@ -9,6 +9,10 @@ import json
 import os
 import zipfile
 
+# Edit the Nyan Cat frames using ffmpeg to add a transparent padding at the bottom and make the colors more neutral, then convert them to PNG format for better compatibility with Chrome
+# ffmpeg -f apng -i nyan-0.png -vf "crop=iw-38:ih:0:0,colorchannelmixer=aa=0.95,format=rgba,geq=r='p(X,Y)':g='p(X,Y)':b='p(X,Y)':a='p(X,Y)*(1-(X/W))',pad=iw:ih+2:0:2:color=0x00000000" -f apng -plays 0 nyan_cat.png
+# ffmpeg -f apng -i nyan-1.png -vf "colorchannelmixer=aa=0.5" -f apng -plays 0 nyan_sparkles.png                          
+
 manifest_data = {
     "manifest_version": 3,
     "version": "5.8.4",
@@ -158,8 +162,8 @@ colors = {
         "text_color": "#FFFFFF",
         "text_color_popup": "#FFFFFF",
         "text_muted_color": "#CCCCCC",
-        "toolbar_color": "#121521",
-        "additional_backgrounds": ["images/nyan-0.png", "images/nyan-1.png"],
+        "toolbar_color": "#12152130",
+        "additional_backgrounds": ["images/nyan_cat.png", "images/nyan_sparkles.png"],
         "additional_backgrounds_alignment": ["right top", "right top"],
         "additional_backgrounds_tiling": ["no-repeat", "repeat"],
     },
@@ -209,6 +213,12 @@ def convert_theme(theme):
 # Load common manifest data
 with open(os.path.join("templates", "common.json"), "r", encoding="utf-8") as f:
     manifest_data.update(json.load(f))
+
+# Delete the previously generated packages
+if os.path.exists("out"):
+    for file in os.listdir("out"):
+        if file.endswith(".xpi") or file.endswith(".zip"):
+            os.remove(os.path.join("out", file))
 
 # Generate extension package for each browser
 for browser in ["firefox", "chrome"]:
