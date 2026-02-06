@@ -161,7 +161,7 @@ colors = {
         "text_color_popup": "#FFFFFF",
         "text_muted_color": "#CCCCCC",
         "toolbar_color": "#12152130",
-        "additional_backgrounds": ["images/nyan_cat.png", "images/nyan_sparkles.png"],
+        "additional_backgrounds": ["images/nyan_cat_[browser].png", "images/nyan_sparkles_[browser].png"],
         "additional_backgrounds_alignment": ["right top", "right top"],
         "additional_backgrounds_tiling": ["no-repeat", "repeat"],
     },
@@ -235,14 +235,22 @@ for browser in ["firefox", "chrome"]:
                 if theme_frame.endswith(".svg") and browser != "firefox":
                     theme_frame = theme_frame.replace(".svg", ".png")
                 manifest["theme"]["images"]["theme_frame"] = theme_frame
+            if "additional_backgrounds" in colormap.keys():
+                additional_backgrounds = [bg.replace("[browser]", browser) for bg in colormap["additional_backgrounds"]]
             if "theme_ntp_bg" in colormap.keys():
                 manifest["theme"]["images"]["theme_ntp_background"] = colormap["theme_ntp_bg"]
-            if "additional_backgrounds" in colormap:
-                manifest["theme"]["images"]["additional_backgrounds"] = colormap["additional_backgrounds"]
-            if "additional_backgrounds_alignment" in colormap:
-                manifest["theme"]["properties"]["additional_backgrounds_alignment"] = colormap["additional_backgrounds_alignment"]
-            if "additional_backgrounds_tiling" in colormap:
-                manifest["theme"]["properties"]["additional_backgrounds_tiling"] = colormap["additional_backgrounds_tiling"]
+            if browser == "firefox":
+                if "additional_backgrounds" in colormap:
+                    manifest["theme"]["images"]["additional_backgrounds"] = colormap["additional_backgrounds"]
+                if "additional_backgrounds_alignment" in colormap:
+                    manifest["theme"]["properties"]["additional_backgrounds_alignment"] = colormap["additional_backgrounds_alignment"]
+                if "additional_backgrounds_tiling" in colormap:
+                    manifest["theme"]["properties"]["additional_backgrounds_tiling"] = colormap["additional_backgrounds_tiling"]
+            else:
+                if "additional_backgrounds" in colormap:
+                    manifest["theme"]["images"]["theme_frame"] = additional_backgrounds[0]
+                    if len(additional_backgrounds) > 1:
+                        manifest["theme"]["images"]["theme_toolbar"] = additional_backgrounds[1]
             context = colormap.copy()
             manifest["theme"]["colors"] = {
                 key: context[value] if value in context else value
