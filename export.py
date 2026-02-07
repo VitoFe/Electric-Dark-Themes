@@ -11,7 +11,8 @@ import zipfile
 
 # Edit the Nyan Cat frames using ffmpeg to add a transparent padding at the bottom and make the colors more neutral, then convert them to PNG format for better compatibility with Chrome
 # ffmpeg -f apng -i nyan-0.png -vf "crop=iw-38:ih:0:0,colorchannelmixer=aa=0.95,format=rgba,geq=r='p(X,Y)':g='p(X,Y)':b='p(X,Y)':a='p(X,Y)*(1-(X/W))',pad=iw:ih+2:0:2:color=0x00000000" -f apng -plays 0 nyan_cat.png
-# ffmpeg -f apng -i nyan-1.png -vf "colorchannelmixer=aa=0.5" -f apng -plays 0 nyan_sparkles.png                          
+# ffmpeg -f apng -i nyan-1.png -vf "colorchannelmixer=aa=0.5" -f apng -plays 0 nyan_sparkles.png      
+# ffmpeg -i .\bubududu-panda.gif -vf "format=rgba,crop=iw:ih-30:0:30,pad=iw+525:ih:0:0:color=0x00000000,scale=-1:65:flags=bicubic" -f apng -plays 0 bubu.png                    
 
 manifest_data = {
     "manifest_version": 3,
@@ -36,6 +37,7 @@ addon_ids = {
     "Cyberpunk": "{5d266402-4868-4f0c-b650-fd2d17c3a761}",
     "Nyan": "{5d266402-4868-4f0c-b650-fd2d17c3a962}",
     "Vaporwave": "{5d266402-4868-4f0c-b650-fd2d17c3a763}",
+    "Panda": "{5d266402-4868-4f0c-b650-fd2d17c3a963}",
 }
 
 
@@ -177,6 +179,20 @@ colors = {
         "toolbar_color": "#1A0F2B50",
         "theme_frame": "images/vaporwave.png"
     },
+    "Panda": {
+        "accent_color": "#FFFFFF",
+        "accent_color_trans": "#FFFFFF20",
+        "accent_color_semitrans": "#FFFFFF30",
+        "accent_color_chrome": "#FFFFFF",
+        "frame_color": "#101010",
+        "text_color": "#FFFFFF",
+        "text_color_popup": "#FFFFFF",
+        "text_muted_color": "#CCCCCC",
+        "toolbar_color": "#21212110",
+        "additional_backgrounds": ["images/bubu.png"],
+        "additional_backgrounds_alignment": ["right top"],
+        "additional_backgrounds_tiling": ["no-repeat"],
+    },
 }
 
 def invert_hex(hex_color):
@@ -241,7 +257,7 @@ for browser in ["firefox", "chrome"]:
                 manifest["theme"]["images"]["theme_ntp_background"] = colormap["theme_ntp_bg"]
             if browser == "firefox":
                 if "additional_backgrounds" in colormap:
-                    manifest["theme"]["images"]["additional_backgrounds"] = colormap["additional_backgrounds"]
+                    manifest["theme"]["images"]["additional_backgrounds"] = additional_backgrounds
                 if "additional_backgrounds_alignment" in colormap:
                     manifest["theme"]["properties"]["additional_backgrounds_alignment"] = colormap["additional_backgrounds_alignment"]
                 if "additional_backgrounds_tiling" in colormap:
