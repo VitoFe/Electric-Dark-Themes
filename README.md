@@ -32,6 +32,8 @@ Install the theme from the respective Firefox Addons page (click on an image) or
 
 [![Nyan Cat Purple-Dark](./previews/Nyan.png)](https://addons.mozilla.org/en-US/firefox/addon/nyan-cat-purple-dark/)
 
+[![Bubu Panda Dark](./previews/Bubu.png)](https://addons.mozilla.org/en-US/firefox/addon/bubu-panda-dark/)
+
 ## How to build from source
 
 The dependencies used in the code are all part of the Python Standard Library and do not need to be installed manually as they are included with a standard installation of Python.
