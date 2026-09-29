@@ -16,7 +16,7 @@ import zipfile
 
 manifest_data = {
     "manifest_version": 3,
-    "version": "5.8.5",
+    "version": "5.9.0",
     "name": "Electric [color] Dark",
     "author": "Vito Ferri",
     "developer": {"name": "Vito Ferri", "url": "https://github.com/VitoFe"},
@@ -186,7 +186,7 @@ colors = {
         "accent_color_chrome": "#FFFFFF",
         "frame_color": "#101010",
         "text_color": "#FFFFFF",
-        "text_color_popup": "#FFFFFF",
+        "text_color_popup": "#101010",
         "text_muted_color": "#CCCCCC",
         "toolbar_color": "#21212110",
         "additional_backgrounds": ["images/bubu.png"],
@@ -242,6 +242,7 @@ for browser in ["firefox", "chrome"]:
         for accent, colormap in colors.items():
             manifest = copy.deepcopy(manifest_data)
             manifest["theme"]["colors"].update(manifest_spec["colors"])
+            manifest["theme"]["properties"].update(manifest_spec.get("properties", {}))
             manifest["name"] = manifest_data["name"].replace("[color]", accent)
             manifest.update(
                 {"browser_specific_settings": {"gecko": {"id": addon_ids[accent]}}}
@@ -268,6 +269,11 @@ for browser in ["firefox", "chrome"]:
                     if len(additional_backgrounds) > 1:
                         manifest["theme"]["images"]["theme_toolbar"] = additional_backgrounds[1]
             context = colormap.copy()
+            # Firefox only trusts an opaque toolbar_field to pick the address bar's
+            # color scheme; with a translucent one it falls back to the text color
+            # and our accents (e.g. #BD00FF) count as "dark text", so Firefox 157+
+            # renders the search engine pill and other controls in light mode.
+            context["field_color"] = colormap["frame_color"][:7]
             manifest["theme"]["colors"] = {
                 key: context[value] if value in context else value
                 for key, value in manifest["theme"]["colors"].items()
