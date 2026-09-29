@@ -2,7 +2,7 @@
   "colors": {
     "sidebar": "frame_color",
     "sidebar_text": "text_color",
-    "toolbar_field": "frame_color",
+    "toolbar_field": "field_color",
     "toolbar_field_border": "accent_color_semitrans",
     "toolbar_field_border_focus": "accent_color",
     "toolbar_field_highlight": "accent_color_semitrans",
@@ -17,5 +17,8 @@
     "popup_text": "text_color",
     "button_background_active": "accent_color_semitrans",
     "button_background_hover": "accent_color_trans"
+  },
+  "properties": {
+    "backgrounds_area": "top_toolbars"
   }
 }
